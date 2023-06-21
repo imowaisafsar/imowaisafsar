@@ -1,6 +1,6 @@
 # Hello, World! 👋 I'm Owais 🚀
 
-![Developer](https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif)
+![Developer](https://media.giphy.com/media/L8K62iTDkzGX6/giphy.gif)
 
 I'm a **JavaScript and ASP.NET developer** who doesn't just create web applications but gives them a soul. The browser is my canvas, and the code is my paintbrush.
 
