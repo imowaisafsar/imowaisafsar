@@ -4,30 +4,31 @@ I'm a JavaScript and ASP.NET developer who loves to create web applications and 
 
 ## 🔭 I’m currently working on ...
 
-- A personal portfolio website using React and Bootstrap
-- A chatbot application using Node.js and Dialogflow
-- A blog platform using ASP.NET Core and MongoDB
+- A personal portfolio website using NextJs and NodeJs
+- A chat application using ASP.NET Core 7 and SignalR
+- A community web application using Angular
 
 ## 🌱 I’m currently learning ...
 
-- TypeScript and Angular
-- GraphQL and Apollo
-- Azure and AWS
+- TypeScript and NextJs
+- BlockChain
+- Metaverse
 
 ## 💬 Ask me about ...
 
-- Anything related to JavaScript or ASP.NET
+- Anything related to JavaScript, TypeScript or ASP.NET
 - My projects and experiences
 - My hobbies and interests
 
 ## 📫 How to reach me ...
 
-- Email: imowaisafsar@gmail.com
-- LinkedIn: https://www.linkedin.com/in/imowaisafsar/
+- Email: owaisafsar.mail@gmail.com
+- LinkedIn: https://www.linkedin.com/in/imowaisafsar
 - Twitter: https://twitter.com/imowaisafsar
+- Facebook: https://facebook.com/imowaisafsar
+- Instagram: https://instagram.com/imowaisafsar
 
 ## ⚡ Fun fact ...
 
-- I like to play chess and guitar in my free time
-- I'm a fan of Harry Potter and Lord of the Rings
+- I like to read personal development books and watch videos in my free time
 - I'm always up for a good conversation and a cup of tea ☕
