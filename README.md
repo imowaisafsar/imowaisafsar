@@ -42,5 +42,3 @@ I'm a **JavaScript and ASP.NET developer** who doesn't just create web applicati
 ![Working](https://media.giphy.com/media/ko7twHhomhk8E/giphy.gif)
 
 Coding is my second language, sometimes even my first. Always ready for a brainstorm, and for a good brew! So, feel free to reach out if you're looking for a developer, have a question, or just want to connect! 💬👋
-
-![End](https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif)
