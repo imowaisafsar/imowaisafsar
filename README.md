@@ -1,22 +1,33 @@
-# Hi, I'm Owais Afsar! 👋
+# Hi there, I'm Owais 👋
 
-![Owais' GitHub stats](https://github-readme-stats.vercel.app/api?username=imowaisafsar&show_icons=true&theme=radical)
+I'm a JavaScript and ASP.NET developer who loves to create web applications and learn new technologies.
 
-A passionate developer specializing in JavaScript, TypeScript, and ASP.NET. I strive to make code more efficient, readable, and reusable. Always up for new challenges!
+## 🔭 I’m currently working on ...
 
-## Skills:
-- Languages: JavaScript, TypeScript, ASP.NET
-- Tools: React, Node, Express, Docker, Kubernetes
-- Currently learning: Microservices and System Design
+- A personal portfolio website using React and Bootstrap
+- A chatbot application using Node.js and Dialogflow
+- A blog platform using ASP.NET Core and MongoDB
 
-## Connect with me:
+## 🌱 I’m currently learning ...
 
-- LinkedIn: [Owais Afsar](www.linkedin.com/link-to-your-profile)
-- Twitter: [@Owais](www.twitter.com/link-to-your-profile)
-- Blog: [Owais Afsar Blog](www.link-to-your-blog.com)
+- TypeScript and Angular
+- GraphQL and Apollo
+- Azure and AWS
 
-## Latest Blog Posts:
+## 💬 Ask me about ...
 
-- [Exploring TypeScript](#)
-- [A deep dive into JavaScript](#)
-- [Mastering ASP.NET](#)
+- Anything related to JavaScript or ASP.NET
+- My projects and experiences
+- My hobbies and interests
+
+## 📫 How to reach me ...
+
+- Email: imowaisafsar@gmail.com
+- LinkedIn: https://www.linkedin.com/in/imowaisafsar/
+- Twitter: https://twitter.com/imowaisafsar
+
+## ⚡ Fun fact ...
+
+- I like to play chess and guitar in my free time
+- I'm a fan of Harry Potter and Lord of the Rings
+- I'm always up for a good conversation and a cup of tea ☕
