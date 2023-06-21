@@ -1,16 +1,22 @@
-### Hi there 👋
+# Hi, I'm Owais Afsar! 👋
 
-<!--
-**imowaisafsar/imowaisafsar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+![Owais' GitHub stats](https://github-readme-stats.vercel.app/api?username=imowaisafsar&show_icons=true&theme=radical)
 
-Here are some ideas to get you started:
+A passionate developer specializing in JavaScript, TypeScript, and ASP.NET. I strive to make code more efficient, readable, and reusable. Always up for new challenges!
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Skills:
+- Languages: JavaScript, TypeScript, ASP.NET
+- Tools: React, Node, Express, Docker, Kubernetes
+- Currently learning: Microservices and System Design
+
+## Connect with me:
+
+- LinkedIn: [Owais Afsar](www.linkedin.com/link-to-your-profile)
+- Twitter: [@Owais](www.twitter.com/link-to-your-profile)
+- Blog: [Owais Afsar Blog](www.link-to-your-blog.com)
+
+## Latest Blog Posts:
+
+- [Exploring TypeScript](#)
+- [A deep dive into JavaScript](#)
+- [Mastering ASP.NET](#)
