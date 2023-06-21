@@ -1,5 +1,3 @@
-Sure! I'll find some different gif images for you.
-
 # Hi there, I'm Owais 👋
 
 I'm a JavaScript and ASP.NET developer who loves to breathe life into web applications and push the boundaries of learning.
