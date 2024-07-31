@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-accents-0 text-white;
+}
+
+:root {
+    --scrollbar-primary: #000;
+    --scrollbar-secondary: #111;
+}
+
+/* Firefox */
+* {
+    scrollbar-color: var(--scrollbar-secondary) var(--scrollbar-primary);
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scrollbar-primary);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-secondary);
+}
+
+.scroll-to-last-message {
+    @apply bottom-4 right-6 bg-accents-2 border-2 border-accents-3 text-white opacity-75 w-8 h-8 rounded-full transition !important;
+    background-image: url("../icons/chevron-down.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.scroll-to-last-message:hover {
+    @apply opacity-100 !important;
+}
+
+pre {
+    @apply bg-accents-2 !important;
+}

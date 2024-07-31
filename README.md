@@ -1,44 +1,47 @@
-# Hello, World! 👋 I'm Owais 🚀
+<div align="center">
+<h1>AI Study Assistant</h1>
+<p>AI Study Assistant is an open-source project that facilitates the use of ChatGPT with a user-friendly interface, providing many ready-to-use templates within.</p>
+</div>
 
-![Developer](https://media.giphy.com/media/L8K62iTDkzGX6/giphy.gif)
+## Why AI Study Assistant?
 
-I'm a **JavaScript and ASP.NET developer** who doesn't just create web applications but gives them a soul. The browser is my canvas, and the code is my paintbrush.
+ChatGPT is indeed a powerful system, but it can provide a better user experience for some tasks. For example, when we want to perform a translation, we have to specify the target language each time and ask it to translate. However, with the AI Study Assistant Translate feature, you will feel like you are using a Google Translate and have a better translation.
 
-## 🔭 On my workbench... 
+## Tech Stack
 
-* **NextJs and NodeJs** are helping me craft a personal portfolio website, a dynamic showcase of my journey.
-* With **ASP.NET Core 7 and SignalR**, I'm building a chat application that brings people together, byte by byte.
-* Using **Angular**, I'm creating a community web application, a digital agora for the modern age.
+- Next.js
+- TypeScript
+- Redux
+- Tailwind CSS
+- OpenAI API
 
-## 🌱 Seeds I'm planting...
+## Screenshot
 
-* Diving deep into the seas of **TypeScript and NextJs**.
-* Unlocking the cryptic mysteries of **BlockChain**.
-* Exploring the vast digital landscapes of the **Metaverse**.
+<img src="https://i.imgur.com/Dhcu1LG.png">
+<img src="https://i.imgur.com/BUIKUNM.png">
+<img src="https://i.imgur.com/f7AioUJ.png">
 
-![Seeds](https://media.giphy.com/media/fAnzw6YK33jMwzp5wp/giphy.gif)
+## Templates
 
-## 💬 Open for a chat about...
+- Chat
+- Translate
 
-* Anything and everything **JavaScript, TypeScript, and ASP.NET**.
-* The whys and hows of my **projects and experiences**.
-* The hobbies and interests that make me, well, me!
+## Features
 
-## 📫 Where to find me...
+- Chat with AI powered chatbot.
+- Translate text to different languages.
+- Beautifully designed UI.
+- Dark mode support.
+- Fully responsive.
 
-* Send a message to my [Email](mailto:owaisafsar.mail@gmail.com) 📧
-* Connect with me on [LinkedIn](https://www.linkedin.com/in/imowaisafsar) 💼
-* Let's tweet on [Twitter](https://twitter.com/imowaisafsar) 🐦
-* Stay updated on [Facebook](https://facebook.com/imowaisafsar) 👥
-* Check out my snaps on [Instagram](https://instagram.com/imowaisafsar) 📸
+## Installation
 
-![Find Me](https://media.giphy.com/media/ZBQhoZC0nqknSviPqT/giphy.gif)
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Run `npm install` to install all the dependencies.
+4. Run `npm run build` to build the project. 
+5. Run `npm run start` to start the production server.
 
-## ⚡ A little more about me...
+## Contributing
 
-* I love diving into personal development books and enriching my knowledge via videos in my free time 📚🎥
-* Conversations are my jam, and nothing beats a deep discussion with a hot cup of tea ☕
-
-![Working](https://media.giphy.com/media/ko7twHhomhk8E/giphy.gif)
-
-Coding is my second language, sometimes even my first. Always ready for a brainstorm, and for a good brew! So, feel free to reach out if you're looking for a developer, have a question, or just want to connect! 💬👋
+Contributions to ChatGPT Translator are welcome! If you find a bug or have a feature request, please open an issue on GitHub. If you want to contribute code, please fork the repository and create a pull request.
