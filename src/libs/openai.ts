@@ -33,9 +33,9 @@ export async function translate(
 ) {
     const openai = client();
 
-    if (sourceLang !== 'auto')
-        sourceLang = languages.find(k => k.code === sourceLang).name
-    targetLang = languages.find(k => k.code === targetLang).name;
+    // if (sourceLang !== 'auto')
+    //     sourceLang = languages.find(k => k.code === sourceLang).name
+    // targetLang = languages.find(k => k.code === targetLang).name;
 
     let prompt;
     if (sourceLang === "auto")

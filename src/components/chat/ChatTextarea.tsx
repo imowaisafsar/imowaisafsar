@@ -82,8 +82,8 @@ const ChatTextarea = () => {
     }
 
     const handleSearch = async (prompt: string) => {
-        const apiKey = 'AIzaSyALdENQMkgl55M4dJDYLxuXIeMxQFweNWY';
-        const contextKey = 'c61bc1d50378f4a62';
+        const apiKey = process.env.GOOGLE_SEARCH_API_KEY;
+        const contextKey = process.env.GOOGLE_SEARCH_CONTEXT_KEY;
 
         const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${contextKey}&q=${encodeURIComponent(prompt)}`;
 
