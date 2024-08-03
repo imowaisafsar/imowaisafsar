@@ -24,7 +24,7 @@ export default async function handler(
     const { prompt, messages } = req.body;
     const response = await chat(prompt, messages);
     //console.log(response);
-    const data = response.choices.map(choice => choice.message);
+    const data = response.choices.map((choice: any) => choice.message);
     res.status(200).json({
       status: true,
       data
