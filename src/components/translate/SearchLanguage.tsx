@@ -1,13 +1,13 @@
 import React from 'react';
-import debounce from 'lodash.debounce'
-import {useDispatch} from "react-redux";
-import {setSearch} from "@/redux/reducers/translateSlice";
-import {MagnifyingGlassIcon} from "@heroicons/react/24/solid";
+import { useDispatch } from "react-redux";
+import { setSearch } from "@/redux/reducers/translateSlice";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
+const debounce = require('lodash.debounce');
 
 const SearchLanguage = () => {
     const dispatch = useDispatch();
 
-    const handleInput = debounce((e) => {
+    const handleInput = debounce((e: any) => {
         dispatch(setSearch(e.target.value));
     }, 500);
 
@@ -15,7 +15,7 @@ const SearchLanguage = () => {
         <div className="border-b border-accents-3">
             <div className="relative">
                 <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                    <MagnifyingGlassIcon className="w-4 h-4 text-accents-5"/>
+                    <MagnifyingGlassIcon className="w-4 h-4 text-accents-5" />
                 </div>
                 <input
                     placeholder="Search languages"
