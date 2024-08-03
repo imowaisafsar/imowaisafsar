@@ -5,11 +5,16 @@ import ChatTextarea from "@/components/chat/ChatTextarea";
 
 export default function ChatPage() {
     return (
+        // <div className="flex">
         <Layout title="Chat">
             <Content />
             <Footer>
                 <ChatTextarea />
             </Footer>
         </Layout>
+        //  <div className="right-sidebar">
+        // <h2>Sidebar</h2>
+        // </div>
+        // </div>
     )
 }

@@ -30,6 +30,7 @@ const ChatTextarea = () => {
     const sendMessage = () => {
         if (isLoading) return;
         if (prompt.trim() === '') return;
+
         setIsLoading(true);
         dispatch(addMessage({
             role: 'user',
@@ -41,8 +42,9 @@ const ChatTextarea = () => {
             messages
         })
             .then(response => response.data)
-            .then((data) => {
+            .then((res) => {
                 setIsLoading(false);
+                res.data.map((message: any) => dispatch(addMessage(message)));
 
                 // if (messages.length <= 0) {
                 //     axios.post(`http://localhost:5000/api/conversations`,
@@ -67,26 +69,28 @@ const ChatTextarea = () => {
                 //         });
                 // }
 
-                data.data.map((message: any) => dispatch(addMessage(message)));
-
                 if (!(!!messages && messages.length > 0)) {
                     handleSearch(prompt);
                 }
+            })
+            .catch(error => {
+                setIsLoading(false);
+                console.log(error);
             });
 
         dispatch(setPrompt(''));
     }
 
     const handleSearch = async (prompt: string) => {
-        const apiKey = process.env.GOOGLE_SEARCH_API_KEY;
-        const contextKey = process.env.GOOGLE_SEARCH_CONTEXT_KEY;
+        const apiKey = 'AIzaSyALdENQMkgl55M4dJDYLxuXIeMxQFweNWY';
+        const contextKey = 'c61bc1d50378f4a62';
 
         const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${contextKey}&q=${encodeURIComponent(prompt)}`;
 
         try {
             const result = await axios.get(url);
+            console.log(`search: `, result);
             dispatch(setSearch(result.data));
-            // console.log(`search: `, search);
         } catch (error) {
             console.error('Error communicating with Google search API:', error);
         }
@@ -102,7 +106,6 @@ const ChatTextarea = () => {
                     id="comment"
                     className="px-4 py-3 bg-accents-1 focus:outline-none block w-full text-white rounded-md resize-none"
                     placeholder="Type your message here..."
-                    defaultValue={''}
                     value={prompt}
                     onKeyDown={handleKeyDown}
                     onInput={(e) => dispatch(setPrompt(e.currentTarget.value))}
