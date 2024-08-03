@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import {translate} from "@/libs/openai";
+import { translate } from "@/libs/openai";
 
 interface TranslateRequest extends NextApiRequest {
   body: {
@@ -18,11 +18,11 @@ type Data = {
 }
 
 export default async function handler(
-    req: TranslateRequest,
-    res: NextApiResponse<Data>
+  req: TranslateRequest,
+  res: NextApiResponse<Data>
 ) {
   try {
-    const {text, sourceLang, targetLang} = req.body;
+    const { text, sourceLang, targetLang } = req.body;
     const response = await translate(text, sourceLang, targetLang);
 
     res.status(200).json({

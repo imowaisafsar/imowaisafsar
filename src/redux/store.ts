@@ -6,8 +6,8 @@ import chatSlice from "@/redux/reducers/chatSlice";
 export const store = configureStore({
     reducer: {
         chat: chatSlice,
-        translate: translateSlice,
-    },
+        translate: translateSlice
+    }
 })
 
 export type RootState = ReturnType<typeof store.getState>
