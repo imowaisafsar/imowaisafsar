@@ -6,13 +6,13 @@ export const templateCards: TemplateCard[] = [
         width: 'full'
     },
     {
-        href: "/chat",
+        href: "/search",
         title: "Search",
         description: "Find relevant results from google search.",
         width: 'half'
     },
     {
-        href: "/chat",
+        href: "/quiz",
         title: "Exercise",
         description: "Exercise the topics you love to learn.",
         width: 'half'

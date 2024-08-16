@@ -69,28 +69,32 @@ const ChatTextarea = () => {
                 //         });
                 // }
 
-                if (!(!!messages && messages.length > 0)) {
-                    handleSearch(prompt);
-                }
+                // if (!(!!messages && messages.length > 0)) {
+                //     handleSearch(prompt);
+                // }
             })
             .catch(error => {
                 setIsLoading(false);
                 console.log(error);
             });
 
+        handleSearch(prompt);
+
         dispatch(setPrompt(''));
     }
 
     const handleSearch = async (prompt: string) => {
-        const apiKey = process.env.GOOGLE_SEARCH_API_KEY;
-        const contextKey = process.env.GOOGLE_SEARCH_CONTEXT_KEY;
+        // const apiKey = process.env.OPENAI_API_KEY;
+        // const contextKey = process.env.GOOGLE_SEARCH_CONTEXT_KEY;
+
+        const apiKey = 'AIzaSyCowoCFfofBowDAIZQiz8hpeKqKn9NjQII';
+        const contextKey = 'c61bc1d50378f4a62';
 
         const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${contextKey}&q=${encodeURIComponent(prompt)}`;
-
         try {
             const result = await axios.get(url);
-            console.log(`search: `, result);
-            dispatch(setSearch(result.data));
+            // console.log(`search: `, result);
+            dispatch(setSearch(result?.data ?? []));
         } catch (error) {
             console.error('Error communicating with Google search API:', error);
         }
