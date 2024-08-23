@@ -2,7 +2,7 @@ export const templateCards: TemplateCard[] = [
     {
         href: "/chat",
         title: "Chat",
-        description: "Chat with AI Study Assistant chatbot and expand you learning.",
+        description: "Chat with AI Study Assistant chatbot and expand your learning.",
         width: 'full'
     },
     {

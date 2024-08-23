@@ -69,16 +69,16 @@ const ChatTextarea = () => {
                 //         });
                 // }
 
-                // if (!(!!messages && messages.length > 0)) {
-                //     handleSearch(prompt);
-                // }
+                if (!(!!messages && messages.length > 0)) {
+                    handleSearch(prompt);
+                }
             })
             .catch(error => {
                 setIsLoading(false);
                 console.log(error);
             });
 
-        handleSearch(prompt);
+        // handleSearch(prompt);
 
         dispatch(setPrompt(''));
     }

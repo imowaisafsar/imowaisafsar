@@ -3,22 +3,33 @@ import { Dialog, Transition } from '@headlessui/react'
 import {
     Bars3Icon,
     XMarkIcon,
+    ChatBubbleLeftIcon,
+    PlusIcon
 } from '@heroicons/react/24/outline'
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { classNames } from "@/utils/classNames";
 import { navigation } from "@/data/nativagation";
 import Link from 'next/link';
-import { useDispatch, useSelector } from "react-redux";
-import { addMessage, selectMessages, selectPrompt, setPrompt, addConversation, selectConversations } from "@/redux/reducers/chatSlice";
-import { ChatBubbleLeftIcon } from "@heroicons/react/24/outline";
 import SearchContent from './search/SearchContent';
+import { useDispatch, useSelector } from "react-redux";
+import { selectMessages, setMessages, setSearch } from "@/redux/reducers/chatSlice";
 
 export default function Sidebar() {
+
+    const router = useRouter();
+    const dispatch = useDispatch();
+    const messages = useSelector(selectMessages);
 
     // const conversations = useSelector(selectConversations);
     // console.log(`conversations:`, conversations);
     const [sidebarOpen, setSidebarOpen] = useState(false)
     const pathname = usePathname();
+
+    const resetChatHandler = () => {
+        dispatch(setMessages([]));
+        dispatch(setSearch({ searchInformation: { totalResults: '', formattedSearchTime: '' }, items: [] }));
+        router.replace('/');
+    }
 
     return (
         <>
@@ -106,6 +117,22 @@ export default function Sidebar() {
                         <hr className='my-2 border-gray-600' />
                         <span className="font-medium text-gray-400 text-sm px-2 pt-3">Welcome</span>
                         <nav className="p-2 space-y-1">
+
+                            {messages.length > 0 &&
+                                (<button
+                                    className={'block w-full text-gray-300 hover:bg-accents-1 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md'}
+                                    onClick={resetChatHandler}>
+                                    <PlusIcon
+                                        className={classNames(
+                                            'text-gray-400 group-hover:text-gray-300',
+                                            'mr-3 flex-shrink-0 h-6 w-6'
+                                        )}
+                                        aria-hidden="true"
+                                    />
+                                    New Chat
+                                </button>)
+                            }
+
                             {navigation.map((item) => (
                                 <Link
                                     key={item.name}
