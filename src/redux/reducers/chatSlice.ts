@@ -60,4 +60,5 @@ export const selectPrompt = (state: RootState) => state.chat.prompt;
 export const selectMessages = (state: RootState) => state.chat.messages;
 export const selectConversations = (state: RootState) => state.chat.conversations;
 export const selectSearch = (state: RootState) => state.chat.search;
+
 export default chatSlice.reducer;

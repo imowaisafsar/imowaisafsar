@@ -66,4 +66,5 @@ export const selectSourceLang = (state: RootState) => state.translate.sourceLang
 export const selectSourceText = (state: RootState) => state.translate.sourceText
 export const selectTargetLang = (state: RootState) => state.translate.targetLang
 export const selectTargetText = (state: RootState) => state.translate.targetText
-export default translateSlice.reducer
+
+export default translateSlice.reducer;

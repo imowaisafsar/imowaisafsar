@@ -1,10 +1,16 @@
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
 import NextNProgress from "nextjs-progressbar";
 import { Provider } from "react-redux";
 import { store } from "@/redux/store";
-import '@/assets/styles/globals.css'
-import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
-import SignIn from './sign-in';
+import "@/assets/styles/globals.css";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
+import SignIn from "./sign-in";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -28,6 +34,6 @@ export default function App({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </Provider>
       </SignedIn> */}
-    </ClerkProvider >
-  )
+    </ClerkProvider>
+  );
 }

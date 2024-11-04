@@ -5,7 +5,7 @@ type MarkdownProps = {
     content: string;
 }
 
-const Markdown = ({content}: MarkdownProps) => {
+const Markdown = ({ content }: MarkdownProps) => {
     return (
         <ReactMarkdown>
             {content}
