@@ -1,10 +1,7 @@
-## 🧠 Quote of the Moment
-
-> _"Loading quote..."_
-
-<!--QUOTE_START-->
-> _"This will be replaced by the GitHub Action"_
-<!--QUOTE_END-->
+<!-- QUOTE_START -->
+> "Do not wait to strike till the iron is hot; but make it hot by striking."
+> -- William Butler Yeats
+<!-- QUOTE_END -->
 
 # Hello, World! 👋 I'm Owais 🚀
 
