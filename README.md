@@ -1,6 +1,11 @@
 ## 🧠 Quote of the Moment
 
-![Random Quote](https://your-vercel-app.vercel.app/api/quote)
+> _"Loading quote..."_
+
+<!-- QUOTE_START -->
+> "It always seems impossible until it's done."
+> -- Nelson Mandela
+<!-- QUOTE_END -->
 
 # Hello, World! 👋 I'm Owais 🚀
 
