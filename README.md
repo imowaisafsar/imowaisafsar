@@ -1,11 +1,6 @@
 ## 🧠 Quote of the Moment
 
-> _"Loading quote..."_
-
-<!-- QUOTE_START -->
-> "Do not wait to strike till the iron is hot; but make it hot by striking."
-> -- William Butler Yeats
-<!-- QUOTE_END -->
+![Random Quote](https://your-vercel-app.vercel.app/api/quote)
 
 # Hello, World! 👋 I'm Owais 🚀
 
