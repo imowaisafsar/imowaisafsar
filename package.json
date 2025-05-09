@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "canvas": "^3.1.0",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "@vercel/og": "^0.6.2"
   }
 }

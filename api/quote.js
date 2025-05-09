@@ -1,33 +1,60 @@
+const { ImageResponse } = require('@vercel/og');
 const fetch = require('node-fetch');
-const { createCanvas } = require('canvas');
 
 module.exports = async (req, res) => {
     try {
-        const response = await fetch('https://api.quotable.io/random');
+        const response = await fetch('https://random-quotes-freeapi.vercel.app/api/random');
         const data = await response.json();
-        const { content: quote, author } = data;
+        const { quote, author } = data;
 
-        const canvas = createCanvas(800, 200);
-        const ctx = canvas.getContext('2d');
-
-        // Draw background
-        ctx.fillStyle = '#f0f0f0';
-        ctx.fillRect(0, 0, 800, 200);
-
-        // Draw quote
-        ctx.font = '24px Arial';
-        ctx.fillStyle = '#000';
-        ctx.textAlign = 'center';
-        ctx.fillText(quote, 400, 100);
-
-        // Draw author
-        ctx.font = '18px Arial';
-        ctx.fillText(`-- ${author}`, 400, 150);
-
-        const buffer = canvas.toBuffer('image/png');
-        res.setHeader('Content-Type', 'image/png');
-        res.send(buffer);
+        return new ImageResponse(
+            (
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        width: '800px',
+                        height: '200px',
+                        backgroundColor: '#f0f0f0',
+                        fontFamily: 'Arial',
+                        color: '#000',
+                    }}
+                >
+                    <p style={{ fontSize: '24px', textAlign: 'center' }}>{quote}</p>
+                    <p style={{ fontSize: '18px', textAlign: 'center' }}>-- {author}</p>
+                </div>
+            ),
+            {
+                width: 800,
+                height: 200,
+            }
+        );
     } catch (error) {
-        res.status(500).send('Error generating quote image');
+        console.error(error);
+        return new ImageResponse(
+            (
+                <div
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        width: '800px',
+                        height: '200px',
+                        backgroundColor: '#ffeeee',
+                        color: '#ff0000',
+                        fontFamily: 'Arial',
+                        fontSize: '24px',
+                    }}
+                >
+                    Error loading quote
+                </div>
+            ),
+            {
+                width: 800,
+                height: 200,
+            }
+        );
     }
 };
