@@ -1,36 +1,42 @@
-name: Update Quote
+name: 🔁 Update Random Quote
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:      # Allow manual trigger
 
 jobs:
-  update-quote:
+  update-readme:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Update quote
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Fetch Random Quote
         run: |
-          RESPONSE=$(curl -s https://random-quotes-freeapi.vercel.app/api/random)
-          QUOTE=$(echo $RESPONSE | jq -r '.quote')
-          AUTHOR=$(echo $RESPONSE | jq -r '.author')
-          awk -v quote="$QUOTE" -v author="$AUTHOR" '
-            /<!-- QUOTE_START -->/ {
-              print;
-              print "> \"" quote "\"";
-              print "> -- " author;
-              while (getline && !/<!-- QUOTE_END -->/);
-              print;
-              next;
-            }
-            1
-          ' README.md > temp.md && mv temp.md README.md
-      - name: Commit changes
+          response=$(curl -s https://random-quotes-freeapi.vercel.app/api/random)
+          quote=$(echo "$response" | jq -r '.quote')
+          author=$(echo "$response" | jq -r '.author')
+          echo "> _\"$quote\"_" > quote.txt
+          echo "> **— $author**" >> quote.txt
+
+      - name: Update README
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          if ! git diff --quiet README.md; then
-            git add README.md
-            git commit -m "Update random quote"
-            git push
-          fi
+          start="<!--QUOTE_START-->"
+          end="<!--QUOTE_END-->"
+          quote_content=$(cat quote.txt)
+          awk -v s="$start" -v e="$end" -v q="$quote_content" '
+            BEGIN {print_line=1}
+            $0 ~ s {print; print q; print_line=0; next}
+            $0 ~ e {print_line=1}
+            print_line {print}
+          ' README.md > new_README.md
+          mv new_README.md README.md
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add README.md
+          git commit -m "🔄 update quote"
+          git push
